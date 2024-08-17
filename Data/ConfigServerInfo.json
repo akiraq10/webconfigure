@@ -1,0 +1,17 @@
+[
+  {
+    "scheme": "https://",
+    "domain": "localhost",
+    "sesWebPort": "7333",
+    "idpWebPort": "444",
+    "subDirectoryInstall": "/install",
+    "kfPath": "C:\\Users\\Administrator\\Desktop\\admin.dbk",
+    "kfPWD": "1",
+    "serverName": ".",
+    "dbName": "sesdb",
+    "sqlUserName": "sa",
+    "sqlPWD": "1",
+    "idpPublicServerURL": "https://qavn.asia:444",
+    "sesWebPublicServerURL": "https://qavn.asia:7333"
+  }
+]
