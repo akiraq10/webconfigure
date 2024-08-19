@@ -69,6 +69,13 @@ public class WebInstalationController {
         fill(driver, getElement(driver).serverPublicUrlTxt, URL);
         return this;
     }
+    @Step("Click on Yes Btn when re-configure SES WEB")
+    public WebInstalationController clickReinstallYesBtn(){
+      if (getElement(driver).reinstallYesBtn!=null){
+          click(driver,getElement(driver).reinstallYesBtn);
+      }
+        return this;
+    }
 
 
 }

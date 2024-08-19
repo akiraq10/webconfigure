@@ -1,6 +1,7 @@
 package local.idpPortal.installtionPage;
 
 import io.qameta.allure.Step;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 import java.awt.*;
@@ -69,7 +70,10 @@ public class IdPInstallationController {
 
     @Step("Enable debug log")
     public IdPInstallationController enableDebug() {
-        click(driver, getElement(driver).enableLoggingBtn);
+        if (getElement(driver).enableLoggingBtn.getAttribute("data-checked") == null){
+            click(driver, getElement(driver).enableLoggingBtn);
+        }
+
         return this;
     }
 
@@ -77,6 +81,13 @@ public class IdPInstallationController {
     public IdPInstallationController clickSaveBtn() {
         click(driver, getElement(driver).SaveBtn);
         return this;
+    }
+    @Step("Enable Use Trust certificate")
+    public IdPInstallationController clickUseTrustCerBtn() {
+            click(driver, getElement(driver).enableTrustServerCerBtn);
+        return this;
+
+
     }
 
 }

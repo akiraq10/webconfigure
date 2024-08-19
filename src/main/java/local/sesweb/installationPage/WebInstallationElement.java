@@ -26,6 +26,18 @@ public class WebInstallationElement {
     WebElement configBtn;
     @FindBy(id = "ServerPublicUrl")
     WebElement serverPublicUrlTxt;
+    @FindBy(id = "btn-reinstall-yes")
+    WebElement reinstallYesBtn;
+    @FindBy(id = "btn-reinstall-no")
+    WebElement reinstallNoBtn;
+    @FindBy(id = "IdpHost")
+    WebElement providerUrLTxt;
+    @FindBy(id = "IdpOAuthAppKey")
+    WebElement OAuthClientIDTxt;
+    @FindBy(id = "IdpOAuthAppSecret")
+    WebElement OAuthClientSecretTxt;
+    @FindBy(xpath = "//input[@name='EnableSESWebLogin']//parent::span")
+    WebElement loginUsingIdPBtn ;
 
     private WebInstallationElement(WebDriver driver) {
 //        this.driver= driver;

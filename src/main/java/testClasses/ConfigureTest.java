@@ -23,7 +23,11 @@ public class ConfigureTest extends BaseTest {
     public void config_SESWEB(ConfigureInfoData data) throws InterruptedException, MalformedURLException {
         WebDriver driver=getDriver();
         driver.get(data.getScheme()+data.getDomain()+":"+data.getSesWebPort()+data.getSubDirectoryInstall());
-        webInstallationPage(driver).act().fillKF(data.getKfPath())
+
+
+        webInstallationPage(driver).act()
+                .clickReinstallYesBtn()
+                .fillKF(data.getKfPath())
                 .fillKFPwd(data.getKfPWD())
                 .fillServerName(data.getServerName())
                 .fillDatabase(data.getDbName())
@@ -50,6 +54,7 @@ public class ConfigureTest extends BaseTest {
                 .fillKFPWD(data.getKfPWD())
                 .fillServerName(data.getServerName())
                 .fillDatabase(data.getDbName())
+                .clickUseTrustCerBtn()
                 .fillSQLUserName(data.getSqlUserName())
                 .fillSQLPWD(data.getSqlPWD())
                 .fillIdPServerUrl(data.getIdpPublicServerURL())

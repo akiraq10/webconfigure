@@ -28,8 +28,8 @@
               </excludes>
             </filter>
           </filters>
-          <shadeArtifactAttached>true</shadeArtifactAttached>
-          <shadeClassifierName>fat-tests</shadeClassifierName>
+          <shadedArtifactAttached>true</shadedArtifactAttached>
+          <shadedClassifierName>fat-tests</shadedClassifierName>
           <transformers>
             <transformer>
               <mainClass>testClasses.Main</mainClass>

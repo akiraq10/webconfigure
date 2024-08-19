@@ -1,9 +1,6 @@
 package ults;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -15,6 +12,7 @@ import java.awt.event.KeyEvent;
 import java.time.Duration;
 import java.util.List;
 
+import static local.idpPortal.installtionPage.IdPInstallationElement.getElement;
 import static org.testng.Assert.*;
 
 public class ElementController {
@@ -44,8 +42,11 @@ public class ElementController {
 
 
     public static void click(WebDriver driver,WebElement element){
-        waitForElementClickAble(driver,element);
-        element.click();
+
+            waitForElementClickAble(driver,element);
+            element.click();
+
+
     }
     public static void fill(WebDriver driver,WebElement element,String textDatabase){
         waitForElementVisibility(driver,element);

@@ -30,6 +30,8 @@ public class IdPInstallationElement {
     WebElement SaveBtn;
     @FindBy(xpath = "//button[text()='Sign in']")
     WebElement signInBtn;
+    @FindBy(xpath = "//input[@name='trustServerCertificate']//parent::label ")
+    WebElement enableTrustServerCerBtn;
 
     private IdPInstallationElement(WebDriver driver) {
 //        this.driver= driver;
