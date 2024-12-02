@@ -195,7 +195,7 @@ public class ElementController {
                     highLightElement(driver,row);
                     driver.findElement(
                             By.xpath(
-                                    "//td[text()='"+row.getText()+"']/preceding-sibling::td/input[@type='checkbox']"
+                                    "//td[text()='"+row.getText()+"']/preceding-sibling::td//input[@type='checkbox']"
 
                     )).click();
 
@@ -219,7 +219,7 @@ public class ElementController {
                     highLightElement(driver,row);
                     driver.findElement(
                             By.xpath(
-                                    "//td[text()=' "+row.getText()+" ']/preceding-sibling::td/input[@type='checkbox']"
+                                    "//td[text()=' "+row.getText()+" ']/preceding-sibling::td//input[@type='checkbox']"
                             )).click();
 
                     break;
@@ -243,7 +243,7 @@ public class ElementController {
                     highLightElement(driver,row);
                     driver.findElement(
                             By.xpath(
-                                    "//td[.//a[text()='"+row.getText()+"']]/preceding-sibling::td/input[@type='checkbox']"
+                                    "//td[.//a[text()='"+row.getText()+"']]/preceding-sibling::td//input[@type='checkbox']"
                             )).click();
 
                     break;

@@ -26,16 +26,23 @@ public class BaseTest {
     private static final List<DriverFactory> driverThreadPool = Collections.synchronizedList((new ArrayList<>()));
     private static   ThreadLocal<DriverFactory> driverThread;
     private String browser;
+    String url;
+    String adminUser;
+    String pwd;
+
 
 
     public WebDriver getDriver() throws MalformedURLException {
         return driverThread.get().getDriver(Browser.valueOf(browser));
     }
 
-    @Parameters({"browser"})
+    @Parameters({"browser","url","adminUser","pwd"})
     @BeforeMethod(alwaysRun = true)
-    public void initWebDriverObject(String browser) {
-        this.browser=browser;;
+    public void initWebDriverObject(String browser,String url,String adminUser, String pwd) {
+        this.browser=browser;
+        this.url=url;
+        this.adminUser=adminUser;
+        this.pwd=pwd;
         driverThread = ThreadLocal.withInitial(()->{
             DriverFactory driverThread = new DriverFactory();
             driverThreadPool.add(driverThread);
