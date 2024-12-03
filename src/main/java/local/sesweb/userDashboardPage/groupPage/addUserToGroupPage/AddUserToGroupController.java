@@ -1,7 +1,6 @@
 package local.sesweb.userDashboardPage.groupPage.addUserToGroupPage;
 
 import io.qameta.allure.Step;
-import local.sesweb.userDashboardPage.groupPage.addGroupPage.AddGroupController;
 import org.openqa.selenium.WebDriver;
 
 
@@ -28,12 +27,17 @@ public class AddUserToGroupController {
 
     @Step("Click on Page size dropdown List")
     public AddUserToGroupController clickOnPageSizeDropdownList(){
-        click(driver,getEle(driver).pageSizeDrpList);
+        hover(driver,getEle(driver).selectSizeDropdownList);
+        click(driver,getEle(driver).selectSizeDropdownList);
+
+
+
         return this;
     }
-    @Step("select page size =30")
-    public AddUserToGroupController clickPageSize30(){
-        click(driver,getEle(driver).pageSize30);
+    @Step("select page size = 40")
+    public AddUserToGroupController clickPageSize40() throws InterruptedException {
+        click(driver,getEle(driver).pageSize40);
+        Thread.sleep(1000);
         return this;
     }
     @Step("Click on select All users checkbox")

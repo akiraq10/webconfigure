@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AddUserToGroupElements {
     @FindBy(id = "breadcrumb_Folder_AssignGroup_4")
@@ -21,14 +20,18 @@ public class AddUserToGroupElements {
     WebElement redWarningAlert;
     @FindBy(css =".alert.success")
     WebElement successAlert;
-    @FindBy(css="input[aria-label='Select all rows']")
+    @FindBy(css="input[aria-label='Select all rows'][aria-checked='false']")
     WebElement selectAllUsersChk;
 
 
-    @FindBy(css="span[aria-label='Page sizes drop down']")
-    WebElement pageSizeDrpList;
-    @FindBy(xpath = "//div[@aria-label='Page sizes drop down']//li/span[text()=40]")
-    WebElement pageSize30;
+//    @FindBy(css="span[unselectable='on'][aria-label='select']")
+//    WebElement pageSizeDrpList;
+//    @FindBy(xpath = "//div[@aria-label='Page sizes drop down']//li/span[text()=40]")
+//    WebElement pageSize40;
+    @FindBy(xpath = "//li[text()=40]")
+    WebElement pageSize40;
+    @FindBy(id="uniform-undefined")
+    WebElement selectSizeDropdownList;
 
     private AddUserToGroupElements(WebDriver driver) {
 

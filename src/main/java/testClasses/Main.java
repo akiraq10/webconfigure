@@ -21,23 +21,28 @@ public class Main {
             boolean startWithTestDot = classInfoName.startsWith("testClasses.");
             boolean isBaseTestClass = classInfoName.startsWith("testClasses.BaseTest");
             boolean isMainTestClass = classInfoName.startsWith("testClasses.Main");
+            boolean isAddUserTestClass=classInfoName.startsWith("testClasses.AddUserTest");
 
-            if (startWithTestDot && !isBaseTestClass && !isMainTestClass) {
+
+            if (isAddUserTestClass && !isBaseTestClass && !isMainTestClass) {
                 testClasses.add(info.load());
             }
         }
 
-        //Get browser
+        //Get browser,url,admin, pwd info
         String browser = System.getProperty("browser");
+        String url=System.getProperty("url");
+        String adminUser=System.getProperty("adminUser");
+        String adminPwd=System.getProperty("pwd");
 //        String browser = System.getenv("browser");
-        if (browser == null) {
-            throw new IllegalArgumentException("[ERR] Please provide the browser via -Dbrowser");
+        if (browser == null || url==null || adminUser ==null || adminPwd==null) {
+            throw new IllegalArgumentException("[ERR] Please provide the browser via -Dbrowser || url via -Durl || adminUser via -DadminUser || adminPWD via -Dpwd");
         }
 
         try {
             Browser.valueOf(browser);
         } catch (Exception e) {
-            throw new IllegalArgumentException("[ERR] We don't support browser " + browser+ ", supported browser: " + Arrays.toString(Browser.values()));
+            throw new IllegalArgumentException("[ERR] We don't support browser " + browser+ ", supported browsers: " + Arrays.toString(Browser.values()));
         }
 
         //Assign test classes to browser
@@ -48,7 +53,7 @@ public class Main {
         //Build Test suite
         TestNG testNG = new TestNG();
         XmlSuite suite = new XmlSuite();
-        suite.setName("Configure SES WEB/IdP");
+        suite.setName("Add and set admin for new user");
 
         List<XmlTest> allTests = new ArrayList<>();
         for (String browserNames : desireCaps.keySet()) {
@@ -61,6 +66,9 @@ public class Main {
             }
             test.setXmlClasses(xmlClasses);
             test.addParameter("browser",browser);
+            test.addParameter("url",url);
+            test.addParameter("adminUser",adminUser);
+            test.addParameter("pwd",adminPwd);
             allTests.add(test);
         }
         suite.setTests(allTests);
@@ -72,7 +80,7 @@ public class Main {
 
         //invoke run method
         testNG.setXmlSuites(suites);
-        testNG.run();
+//        testNG.run();
 
 
 

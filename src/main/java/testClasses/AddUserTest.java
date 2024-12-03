@@ -5,7 +5,6 @@ import dataprovider.getdata.GroupInfoData;
 import dataprovider.getdata.UserInfoData;
 import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
@@ -22,46 +21,46 @@ import static local.sesweb.userDashboardPage.userPage.addUserPage.AddUserPage.ad
 
 public class AddUserTest extends BaseTest{
 
-//    @Description("Add new user")
-//    @Test(description = "Test case SDTC....: Verify can add new user success",
-//            dataProvider = "UserInfo",
-//            dataProviderClass = ReadDataFromJSon.class )
-//    public void CreateUser(UserInfoData data) throws MalformedURLException {
-//        WebDriver driver=getDriver();
-//        driver.get(url);
-//        loginPage(driver).act().loginSESWEB(adminUser,pwd);
-//        userDashboardPage(driver).act()
-//                .hoverOnFolderMenu()
-//                .clickOnAddUser();
-//
-//        addUserPage(driver).act()
-//                .fillUserID(data.getUsername())
-//                .fillPWD(data.getPwd())
-//                .clickOnSaveBtn();
-//
-//    }
-//
-//    @Description("Add new Group on SES.WEB success")
-//    @Test(description = "Test case SDTC....: Verify can add new Group success",
-//            dataProvider = "GroupInfo",
-//            dataProviderClass = ReadDataFromJSon.class )
-//    public void CreateGroup(GroupInfoData data) throws MalformedURLException, InterruptedException {
-//        WebDriver driver=getDriver();
-//        driver.get(url);
-//        loginPage(driver).act()
-//                        .loginSESWEB(adminUser,pwd);
-//        userDashboardPage(driver).act()
-//                .hoverOnFolderMenu()
-//                .clickOnAddGroup();
-//        addGroupPage(driver).act()
-//                .fillGroupName(data.getGroupName())
-//                .fillDescription(data.getGroupDescription())
-//                .clickOnSaveButton();
-//    }
+    @Description("Add new user")
+    @Test(description = "Test case SDTC....: Verify can add new user success",
+            dataProvider = "UserInfo",
+            dataProviderClass = ReadDataFromJSon.class )
+    public void CreateUser(UserInfoData data) throws MalformedURLException {
+        WebDriver driver=getDriver();
+        driver.get(url);
+        loginPage(driver).act().loginSESWEB(adminUser,pwd);
+        userDashboardPage(driver).act()
+                .hoverOnFolderMenu()
+                .clickOnAddUser();
+
+        addUserPage(driver).act()
+                .fillUserID(data.getUsername())
+                .fillPWD(data.getPwd())
+                .clickOnSaveBtn();
+
+    }
+
+    @Description("Add new Group on SES.WEB success")
+    @Test(description = "Test case SDTC....: Verify can add new Group success",
+            dataProvider = "GroupInfo",
+            dataProviderClass = ReadDataFromJSon.class )
+    public void CreateGroup(GroupInfoData data) throws MalformedURLException, InterruptedException {
+        WebDriver driver=getDriver();
+        driver.get(url);
+        loginPage(driver).act()
+                        .loginSESWEB(adminUser,pwd);
+        userDashboardPage(driver).act()
+                .hoverOnFolderMenu()
+                .clickOnAddGroup();
+        addGroupPage(driver).act()
+                .fillGroupName(data.getGroupName())
+                .fillDescription(data.getGroupDescription())
+                .clickOnSaveButton();
+    }
     @Description("Add User to Group on SES.WEB success")
     @Test(description = "Test case SDTC....: Verify can add new Group success",
             dataProvider = "GroupInfo",
-//            dependsOnMethods = {"CreateGroup","CreateUser"},
+            dependsOnMethods = {"CreateGroup","CreateUser"},
             dataProviderClass = ReadDataFromJSon.class )
     public void AddUserToGroup(GroupInfoData data) throws MalformedURLException, InterruptedException {
         WebDriver driver=getDriver();
@@ -75,34 +74,34 @@ public class AddUserTest extends BaseTest{
                 .clickOnAddUserToGroupOpt();
         addUserToGroupPage(driver).act()
                 .clickOnPageSizeDropdownList()
-                .clickPageSize30()
+                .clickPageSize40()
                 .clickOnSelectAllUsersChk()
                 .clickOnSaveBtn();
     }
 
-//    @Description("Add group to administrator group success")
-//    @Test(description = "Test case SDTC....: Verify can add  Group administrator group success",
-//            dataProvider = "GroupInfo",
-//            dependsOnMethods = "AddUserToGroup",
-//            dataProviderClass = ReadDataFromJSon.class )
-//    public void AddGroupToAdministratorGroupPage(GroupInfoData data) throws MalformedURLException, InterruptedException {
-//        WebDriver driver=getDriver();
-//        driver.get(url);
-//        loginPage(driver).act()
-//                .loginSESWEB(adminUser,pwd);
-//        configurationPage(driver).act()
-//                .clickConfiguration()
-//                .clickAdministratorManage();
-//        administratorDashboardPage(driver).act()
-//                .clickOnAdministratorGroupTab()
-//                .hoverOnAdministratorMenu()
-//                .clickOnAddAdminGroupOpt();
-//        addAdminGroupPage(driver).act()
-//                .fillGroupNameToSearchBox(data.getGroupName())
-//                .selectGroup(data.getGroupName())
-//                .selectRoleForGroup("Administrator")
-//                .clickOnSaveBtn();
-//    }
+    @Description("Add group to administrator group success")
+    @Test(description = "Test case SDTC....: Verify can add  Group administrator group success",
+            dataProvider = "GroupInfo",
+            dependsOnMethods = "AddUserToGroup",
+            dataProviderClass = ReadDataFromJSon.class )
+    public void AddGroupToAdministratorGroupPage(GroupInfoData data) throws MalformedURLException, InterruptedException {
+        WebDriver driver=getDriver();
+        driver.get(url);
+        loginPage(driver).act()
+                .loginSESWEB(adminUser,pwd);
+        configurationPage(driver).act()
+                .clickConfiguration()
+                .clickAdministratorManage();
+        administratorDashboardPage(driver).act()
+                .clickOnAdministratorGroupTab()
+                .hoverOnAdministratorMenu()
+                .clickOnAddAdminGroupOpt();
+        addAdminGroupPage(driver).act()
+                .fillGroupNameToSearchBox(data.getGroupName())
+                .selectGroup(data.getGroupName())
+                .selectRoleForGroup("Administrator")
+                .clickOnSaveBtn();
+    }
 
 
 }
