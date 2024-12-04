@@ -36,6 +36,7 @@ public class AddUserTest extends BaseTest{
         addUserPage(driver).act()
                 .fillUserID(data.getUsername())
                 .fillPWD(data.getPwd())
+                .unCheckFinalPassword()
                 .clickOnSaveBtn();
 
     }

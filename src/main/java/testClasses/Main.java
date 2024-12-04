@@ -65,40 +65,49 @@ public class Main {
             throw new IllegalArgumentException("[ERR] We don't support browser " + browser + ", supported browsers: " + Arrays.toString(Browser.values()));
         }
 
-        //Assign test classes to browser
+
 //        final int testNumForBrowser = testClasses.size();
         Map<String, List<Class<?>>> desireCaps = new HashMap<>();
         desireCaps.put(browser, testClasses);
 
-        //Build Test suite
+        //Build dynamic Test suite
+
         TestNG testNG = new TestNG();
         XmlSuite suite = new XmlSuite();
         suite.setName("Add and set admin for new user");
+
+        // Set parameters
+        Map<String, String> parameters = new HashMap<>();
+        parameters.put("browser",browser);
+        parameters.put("url", url);
+        parameters.put("adminUser", adminUser);
+        parameters.put("pwd", adminPwd);
 
         List<XmlTest> allTests = new ArrayList<>();
         for (String browserNames : desireCaps.keySet()) {
             XmlTest test = new XmlTest(suite);
             test.setName(browserNames);
             List<XmlClass> xmlClasses = new ArrayList<>();
-            List<Class<?>> delicatedClasses = desireCaps.get(browserNames);
-            for (Class<?> delicatedClass : delicatedClasses) {
+            List<Class<?>> dedicatedClasses = desireCaps.get(browserNames);
+            for (Class<?> delicatedClass : dedicatedClasses) {
                 xmlClasses.add(new XmlClass(delicatedClass.getName()));
             }
             test.setXmlClasses(xmlClasses);
-            test.addParameter("browser", browser);
-            test.addParameter("url", url);
-            test.addParameter("adminUser", adminUser);
-            test.addParameter("pwd", adminPwd);
+            test.setParameters(parameters);
             allTests.add(test);
         }
+
+
         suite.setTests(allTests);
         System.out.println(suite.toXml());
 
-        //Add Testsuite into suite list
+
+
+//        //Add Testsuite into suite list
         List<XmlSuite> suites = new ArrayList<>();
         suites.add(suite);
-
-        //invoke run method
+//
+//        //invoke run method
         testNG.setXmlSuites(suites);
         testNG.run();
 

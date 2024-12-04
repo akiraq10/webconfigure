@@ -4,15 +4,12 @@ package testClasses;
 import driver.Browser;
 import driver.DriverFactory;
 import io.qameta.allure.Allure;
-import org.aeonbits.owner.ConfigFactory;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 import java.io.File;
 import java.io.InputStream;
@@ -25,10 +22,10 @@ import java.util.*;
 public class BaseTest {
     private static final List<DriverFactory> driverThreadPool = Collections.synchronizedList((new ArrayList<>()));
     private static   ThreadLocal<DriverFactory> driverThread;
-    private String browser;
-    String url;
-    String adminUser;
-    String pwd;
+    public String browser;
+    public String url;
+    public String adminUser;
+    public String pwd;
 
 
 
@@ -37,7 +34,7 @@ public class BaseTest {
     }
 
     @Parameters({"browser","url","adminUser","pwd"})
-    @BeforeMethod(alwaysRun = true)
+    @BeforeTest()
     public void initWebDriverObject(String browser,String url,String adminUser, String pwd) {
         this.browser=browser;
         this.url=url;
@@ -52,26 +49,20 @@ public class BaseTest {
 
 
 
-    @AfterMethod(alwaysRun = true)
-    public void quitDriverSession(ITestResult result) {
-      try {
-          takeScreenShoot(result);
+    @AfterSuite(alwaysRun = true)
+    public void quitBrowser() {
+        try {
+            for (DriverFactory driver : driverThreadPool) {
+                driver.quitDriverSession();
+            }
 
-                  if (driverThread != null) {
-
-                      driverThread.get().quitDriverSession();
-
-                  }
-
-
-
-      } catch (Exception e) {
-          e.printStackTrace();
-      }
+        } catch (Exception e) {
+            e.printStackTrace(); // Log any exceptions during cleanup
+        }
 
   }
 
-//   @AfterMethod(alwaysRun = true)
+   @AfterMethod(description = "capture img if test is failed")
     public void takeScreenShoot(ITestResult result) throws MalformedURLException {
         getDriver().manage().deleteAllCookies();
 

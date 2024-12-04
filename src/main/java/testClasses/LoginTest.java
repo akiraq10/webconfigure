@@ -14,14 +14,13 @@ import static local.sesweb.loginPage.LoginPage.loginPage;
 
 public class LoginTest  extends BaseTest{
 
-   @Parameters({"url"})
     @Description("Login SES.WEB success")
     @Test(description = "Test case SDTC....: Verify can login SES.WEB success",
             dataProvider = "UserInfo",
             dataProviderClass = ReadDataFromJSon.class )
     public void loginSES(UserInfoData data) throws MalformedURLException {
         WebDriver driver=getDriver();
-        driver.get("https://meaw5e71uc8w.magicendpoint-dev-ses.com/");
+        driver.get(url);
         loginPage(driver).act()
                 .fillUserName(data.getUsername())
                 .fillPassword(data.getPwd())

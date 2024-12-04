@@ -1,105 +1,1332 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="0" skipped="2">
+<testng-results ignored="0" total="27" passed="26" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-17T16:37:03 ICT" name="Configure SES WEB/IdP" finished-at="2024-08-17T16:37:03 ICT" duration-ms="141">
+  <suite started-at="2024-12-03T12:03:18 ICT" name="Add and set admin for new user" finished-at="2024-12-03T12:08:19 ICT" duration-ms="301704">
     <groups>
     </groups>
-    <test started-at="2024-08-17T16:37:03 ICT" name="chrome" finished-at="2024-08-17T16:37:03 ICT" duration-ms="141">
-      <class name="testClasses.ConfigureTest">
-        <test-method signature="config_IdP(dataprovider.getdata.ConfigureInfoData)[pri:0, instance:testClasses.ConfigureTest@3e96bacf]" started-at="2024-08-17T16:37:03 ICT" name="config_IdP" description="Test case SDTC....: Verify can config IdP portal success" data-provider="ConfigureServer" finished-at="2024-08-17T16:37:03 ICT" duration-ms="0" status="SKIP">
-          <exception class="java.lang.RuntimeException">
+    <test started-at="2024-12-03T12:03:18 ICT" name="chrome" finished-at="2024-12-03T12:08:19 ICT" duration-ms="301704">
+      <class name="testClasses.AddUserTest">
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:03:18 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:03:18 ICT" duration-ms="14" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateGroup(dataprovider.getdata.GroupInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:03:18 ICT" name="CreateGroup" description="Test case SDTC....: Verify can add new Group success" data-provider="GroupInfo" finished-at="2024-12-03T12:03:29 ICT" duration-ms="11407" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.GroupInfoData@63a094cc]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateGroup -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:03:29 ICT" name="quitDriverSession" finished-at="2024-12-03T12:03:29 ICT" duration-ms="250" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateGroup status=SUCCESS method=AddUserTest.CreateGroup(dataprovider.getdata.GroupInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:03:29 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:03:29 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:03:29 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:03:40 ICT" duration-ms="10540" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@32115b28]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:03:40 ICT" name="quitDriverSession" finished-at="2024-12-03T12:03:40 ICT" duration-ms="248" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:03:40 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:03:40 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:03:40 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:03:50 ICT" duration-ms="10024" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@447a020]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:03:50 ICT" name="quitDriverSession" finished-at="2024-12-03T12:03:51 ICT" duration-ms="237" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:03:51 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:03:51 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:03:51 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:04:01 ICT" duration-ms="10044" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@593e824f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:04:01 ICT" name="quitDriverSession" finished-at="2024-12-03T12:04:01 ICT" duration-ms="263" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:04:01 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:04:01 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:04:01 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:04:11 ICT" duration-ms="9846" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@2577d6c8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:04:11 ICT" name="quitDriverSession" finished-at="2024-12-03T12:04:11 ICT" duration-ms="232" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:04:11 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:04:11 ICT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:04:11 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:04:21 ICT" duration-ms="9919" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@54f66455]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:04:21 ICT" name="quitDriverSession" finished-at="2024-12-03T12:04:21 ICT" duration-ms="257" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:04:21 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:04:21 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:04:21 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:04:31 ICT" duration-ms="9726" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@65b66b08]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:04:31 ICT" name="quitDriverSession" finished-at="2024-12-03T12:04:31 ICT" duration-ms="241" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:04:31 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:04:31 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:04:31 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:04:41 ICT" duration-ms="10283" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@3ed7821]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:04:41 ICT" name="quitDriverSession" finished-at="2024-12-03T12:04:42 ICT" duration-ms="228" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:04:42 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:04:42 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:04:42 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:04:51 ICT" duration-ms="9831" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@403c3a01]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:04:51 ICT" name="quitDriverSession" finished-at="2024-12-03T12:04:52 ICT" duration-ms="232" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:04:52 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:04:52 ICT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:04:52 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:05:02 ICT" duration-ms="10033" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@67b355c8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:05:02 ICT" name="quitDriverSession" finished-at="2024-12-03T12:05:02 ICT" duration-ms="245" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:05:02 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:05:02 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:05:02 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:05:14 ICT" duration-ms="11970" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@251c4280]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:05:14 ICT" name="quitDriverSession" finished-at="2024-12-03T12:05:14 ICT" duration-ms="232" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:05:14 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:05:14 ICT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:05:14 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:05:24 ICT" duration-ms="9852" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@74b00247]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:05:24 ICT" name="quitDriverSession" finished-at="2024-12-03T12:05:24 ICT" duration-ms="243" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:05:24 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:05:24 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:05:24 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:05:34 ICT" duration-ms="9919" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@25699aa7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:05:34 ICT" name="quitDriverSession" finished-at="2024-12-03T12:05:34 ICT" duration-ms="232" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:05:34 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:05:34 ICT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:05:34 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:05:44 ICT" duration-ms="9725" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@4fd7b79]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:05:44 ICT" name="quitDriverSession" finished-at="2024-12-03T12:05:44 ICT" duration-ms="235" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:05:44 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:05:44 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:05:44 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:05:55 ICT" duration-ms="10205" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@377dbc50]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:05:55 ICT" name="quitDriverSession" finished-at="2024-12-03T12:05:55 ICT" duration-ms="243" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:05:55 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:05:55 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:05:55 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:06:05 ICT" duration-ms="9837" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@1f6c4ae]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:06:05 ICT" name="quitDriverSession" finished-at="2024-12-03T12:06:05 ICT" duration-ms="237" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:06:05 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:06:05 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:06:05 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:06:15 ICT" duration-ms="9706" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@3e28af44]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:06:15 ICT" name="quitDriverSession" finished-at="2024-12-03T12:06:15 ICT" duration-ms="235" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:06:15 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:06:15 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:06:15 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:06:25 ICT" duration-ms="9809" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@24010875]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:06:25 ICT" name="quitDriverSession" finished-at="2024-12-03T12:06:25 ICT" duration-ms="254" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:06:25 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:06:25 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:06:25 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:06:35 ICT" duration-ms="10109" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@7cd3860]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:06:35 ICT" name="quitDriverSession" finished-at="2024-12-03T12:06:35 ICT" duration-ms="249" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:06:35 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:06:35 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:06:35 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:06:50 ICT" duration-ms="14621" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@1aef7428]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:06:50 ICT" name="quitDriverSession" finished-at="2024-12-03T12:06:50 ICT" duration-ms="235" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:06:50 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:06:50 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:06:50 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:07:00 ICT" duration-ms="9829" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@4a8bf1dc]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:07:00 ICT" name="quitDriverSession" finished-at="2024-12-03T12:07:00 ICT" duration-ms="255" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:07:00 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:07:00 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:07:00 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:07:13 ICT" duration-ms="12588" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@6f926d01]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:07:13 ICT" name="quitDriverSession" finished-at="2024-12-03T12:07:13 ICT" duration-ms="229" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:07:13 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:07:13 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:07:13 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:07:24 ICT" duration-ms="11069" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@65b69ccb]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:07:24 ICT" name="quitDriverSession" finished-at="2024-12-03T12:07:24 ICT" duration-ms="247" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:07:24 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:07:24 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:07:24 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:07:34 ICT" duration-ms="9941" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@5776a9f8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:07:34 ICT" name="quitDriverSession" finished-at="2024-12-03T12:07:35 ICT" duration-ms="234" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:07:35 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:07:35 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:07:35 ICT" name="CreateUser" description="Test case SDTC....: Verify can add new user success" data-provider="UserInfo" finished-at="2024-12-03T12:07:45 ICT" duration-ms="9988" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.UserInfoData@39d37da8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:07:45 ICT" name="quitDriverSession" finished-at="2024-12-03T12:07:45 ICT" duration-ms="250" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CreateUser status=SUCCESS method=AddUserTest.CreateUser(dataprovider.getdata.UserInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:07:45 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:07:45 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="AddUserToGroup(dataprovider.getdata.GroupInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:07:45 ICT" name="AddUserToGroup" description="Test case SDTC....: Verify can add new Group success" data-provider="GroupInfo" finished-at="2024-12-03T12:08:03 ICT" depends-on-methods="testClasses.AddUserTest.CreateGroup, testClasses.AddUserTest.CreateUser" duration-ms="17923" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.GroupInfoData@28758491]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddUserToGroup -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:08:03 ICT" name="quitDriverSession" finished-at="2024-12-03T12:08:03 ICT" duration-ms="236" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AddUserToGroup status=SUCCESS method=AddUserTest.AddUserToGroup(dataprovider.getdata.GroupInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriverSession -->
+        <test-method is-config="true" signature="initWebDriverObject(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:08:03 ICT" name="initWebDriverObject" finished-at="2024-12-03T12:08:03 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://mep8d0sst21g.magicendpoint-dev-ses.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebDriverObject -->
+        <test-method signature="AddGroupToAdministratorGroupPage(dataprovider.getdata.GroupInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:08:03 ICT" name="AddGroupToAdministratorGroupPage" description="Test case SDTC....: Verify can add  Group administrator group success" data-provider="GroupInfo" finished-at="2024-12-03T12:08:18 ICT" depends-on-methods="testClasses.AddUserTest.AddUserToGroup" duration-ms="14975" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dataprovider.getdata.GroupInfoData@61a4faea]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[java.lang.RuntimeException: [ERR] could not locate the file: C:\ConfigureSES/Data/ConfigServerInfo.json]]>
+              <![CDATA[[ERR] Administrator does not existing]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.lang.RuntimeException: [ERR] could not locate the file: C:\ConfigureSES/Data/ConfigServerInfo.json
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:57)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:157)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:812)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:737)
-at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:915)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at testClasses.Main.main(Main.java:75)
-Caused by: java.lang.RuntimeException: [ERR] could not locate the file: C:\ConfigureSES/Data/ConfigServerInfo.json
-at dataprovider.DataObjectBuilder.buildDataObject(DataObjectBuilder.java:25)
-at dataprovider.ReadDataFromJSon.configureInfoData(ReadDataFromJSon.java:16)
+              <![CDATA[java.lang.AssertionError: [ERR] Administrator does not existing
+at org.testng.Assert.fail(Assert.java:111)
+at ults.ElementController.selectElementHasLinkInTable(ElementController.java:253)
+at local.sesweb.configuration.administratorManagementPage.addAdminGroupPage.AddAdminGroupController.selectRoleForGroup(AddAdminGroupController.java:26)
+at testClasses.AddUserTest.AddGroupToAdministratorGroupPage(AddUserTest.java:102)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
-... 23 more
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- config_IdP -->
-        <test-method signature="config_SESWEB(dataprovider.getdata.ConfigureInfoData)[pri:0, instance:testClasses.ConfigureTest@3e96bacf]" started-at="2024-08-17T16:37:03 ICT" name="config_SESWEB" description="Test case SDTC....: Verify can config SES.WEB success" data-provider="ConfigureServer" finished-at="2024-08-17T16:37:03 ICT" duration-ms="0" status="SKIP">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[java.lang.RuntimeException: [ERR] could not locate the file: C:\ConfigureSES/Data/ConfigServerInfo.json]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.lang.RuntimeException: [ERR] could not locate the file: C:\ConfigureSES/Data/ConfigServerInfo.json
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:57)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:157)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:812)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:737)
-at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:915)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at testClasses.Main.main(Main.java:75)
-Caused by: java.lang.RuntimeException: [ERR] could not locate the file: C:\ConfigureSES/Data/ConfigServerInfo.json
-at dataprovider.DataObjectBuilder.buildDataObject(DataObjectBuilder.java:25)
-at dataprovider.ReadDataFromJSon.configureInfoData(ReadDataFromJSon.java:16)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
-... 23 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+        </test-method> <!-- AddGroupToAdministratorGroupPage -->
+        <test-method is-config="true" signature="quitDriverSession(org.testng.ITestResult)[pri:0, instance:testClasses.AddUserTest@6bf0219d]" started-at="2024-12-03T12:08:18 ICT" name="quitDriverSession" finished-at="2024-12-03T12:08:19 ICT" duration-ms="1365" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AddGroupToAdministratorGroupPage status=FAILURE method=AddUserTest.AddGroupToAdministratorGroupPage(dataprovider.getdata.GroupInfoData)[pri:0, instance:testClasses.AddUserTest@6bf0219d] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- config_SESWEB -->
-      </class> <!-- testClasses.ConfigureTest -->
+        </test-method> <!-- quitDriverSession -->
+      </class> <!-- testClasses.AddUserTest -->
     </test> <!-- chrome -->
-  </suite> <!-- Configure SES WEB/IdP -->
+  </suite> <!-- Add and set admin for new user -->
 </testng-results>

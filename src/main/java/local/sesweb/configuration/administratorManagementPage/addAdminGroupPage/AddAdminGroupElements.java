@@ -11,7 +11,7 @@ public class AddAdminGroupElements {
     WebElement searchBox;
   @FindBy(css="table[data-role]>tbody")
     WebElement selectGroupTable;
-  @FindBy(xpath = "//div[@id='kendogrid2']//table[@role='grid']")
+  @FindBy(xpath = "//div[@id='kendogrid2']//table[@role='grid']/tbody")
     WebElement selectRoleTable;
   @FindBy(css = "button[name='save']")
   WebElement saveBtn;
