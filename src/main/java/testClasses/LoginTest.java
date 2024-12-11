@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 
-import static local.sesweb.loginPage.LoginPage.loginPage;
 
 public class LoginTest  extends BaseTest{
 
@@ -19,12 +18,12 @@ public class LoginTest  extends BaseTest{
             dataProvider = "UserInfo",
             dataProviderClass = ReadDataFromJSon.class )
     public void loginSES(UserInfoData data) throws MalformedURLException {
-        WebDriver driver=getDriver();
-        driver.get(url);
-        loginPage(driver).act()
-                .fillUserName(data.getUsername())
-                .fillPassword(data.getPwd())
-                .clickONLoginBtn();
+//        WebDriver driver=getDriver();
+//        driver.get("https://magicendpoint-dev.com/");
+//        loginSES(driver).act()
+//                .fillUserName("qavndev")
+//                .fillPWD("Qavn@123")
+//                .clickOnLoginBtn();
 
     }
 

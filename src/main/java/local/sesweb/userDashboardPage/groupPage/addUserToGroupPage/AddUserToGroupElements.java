@@ -24,14 +24,14 @@ public class AddUserToGroupElements {
     WebElement selectAllUsersChk;
 
 
-//    @FindBy(css="span[unselectable='on'][aria-label='select']")
-//    WebElement pageSizeDrpList;
-//    @FindBy(xpath = "//div[@aria-label='Page sizes drop down']//li/span[text()=40]")
-//    WebElement pageSize40;
-    @FindBy(xpath = "//li[text()=40]")
-    WebElement pageSize40;
-    @FindBy(id="uniform-undefined")
+    @FindBy(css="span[unselectable='on'][aria-label='Page sizes drop down']")
     WebElement selectSizeDropdownList;
+    @FindBy(xpath = "//div[@aria-label='Page sizes drop down']//li/span[text()=40]")
+    WebElement pageSize40;
+//    @FindBy(xpath = "//li[text()=40]")
+//    WebElement pageSize40;
+//    @FindBy(id="uniform-undefined")
+//    WebElement selectSizeDropdownList;
 
     private AddUserToGroupElements(WebDriver driver) {
 

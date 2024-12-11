@@ -1,0 +1,1 @@
+{"uuid":"0dfc00f3-4ecf-4343-83f2-c3e67167b000","name":"Add and set admin for new user","children":["c1492071-a1b5-4f39-8429-92b88fb64896"],"befores":[],"afters":[{"name":"quitBrowser","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1733286286958,"stop":1733286287083}],"start":1733286279974,"stop":1733286287083}

@@ -3,7 +3,7 @@
 <suite name="Configure SES WEB/IdP"  >
     <test name="chrome">
         <parameter name="browser" value="chrome"/>
-        <parameter name="url" value="https://mep8d0sst21g.magicendpoint-dev-ses.com/"></parameter>
+        <parameter name="url" value="https://me687ffcyl6b.magicendpoint-dev-ses.com/"></parameter>
         <parameter name="adminUser" value="admin"></parameter>
         <parameter name="pwd" value="1"></parameter>
         <classes>

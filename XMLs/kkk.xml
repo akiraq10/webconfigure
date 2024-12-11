@@ -5,9 +5,9 @@
         <parameter name="adminUser" value="admin"/>
         <parameter name="browser" value="chrome"/>
         <parameter name="pwd" value="1"/>
-        <parameter name="url" value="https://meijyptdjvip.magicendpoint-dev-ses.com"/>
+        <parameter name="url" value="https://mefsjnz9pxm4.magicendpoint-dev-ses.com"/>
         <classes>
-            <class name="testClasses.LoginTest"/>
+            <class name="testClasses.AddUserTest"/>
         </classes>
     </test> <!-- chrome -->
 </suite> <!-- Add and set admin for new user -->
